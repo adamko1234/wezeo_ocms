@@ -22,7 +22,7 @@ class Arrival extends Model
     /**
      * @var array Fillable fields
      */
-    protected $fillable = [];
+    protected $fillable = ['name','time'];
 
     /**
      * @var array Validation rules for attributes
@@ -72,3 +72,4 @@ class Arrival extends Model
     public $attachOne = [];
     public $attachMany = [];
 }
+

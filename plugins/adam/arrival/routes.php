@@ -1,19 +1,19 @@
 <?php
 use Adam\Arrival\Models\Arrival;
-Route::name('api')->group(function(){
+Route::prefix('api/v1')->group(function(){
     Route::get('getArrivals', function (){
         return Arrival::get();
     });
 
-    Route::post('postArrivals',function(){
+    Route::post('newArrival',function(){
         Arrival::create([
             'name'=> post('name'),
             'time'=> post('time'),
         ]);
         return "Arrival created<3";
     });
+//    Event::listen('create.event', function($user) {
+//        $user->create();
+//    });
 });
 
-//Route::get('hello', function () {
-//    return 'Hello World';
-//});

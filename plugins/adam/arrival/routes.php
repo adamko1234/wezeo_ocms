@@ -1,16 +1,17 @@
 <?php
 use Adam\Arrival\Models\Arrival;
+Route::name('api')->group(function(){
+    Route::get('getArrivals', function (){
+        return Arrival::get();
+    });
 
-Route::get('getArrivals', function (){
-    return Arrival::get();
-});
-
-Route::post('postArrivals',function(){
-    Arrival::create([
-        'name'=> $_POST['name'],
-        'time'=> $_POST['time'],
-    ]);
-    return "Arrival created<3";
+    Route::post('postArrivals',function(){
+        Arrival::create([
+            'name'=> post('name'),
+            'time'=> post('time'),
+        ]);
+        return "Arrival created<3";
+    });
 });
 
 //Route::get('hello', function () {

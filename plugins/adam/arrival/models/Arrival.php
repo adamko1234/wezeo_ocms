@@ -1,6 +1,7 @@
 <?php namespace Adam\Arrival\Models;
 
 use Model;
+use RainLab\User\Models\User;
 
 /**
  * Arrival Model

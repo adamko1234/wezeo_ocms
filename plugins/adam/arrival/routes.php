@@ -12,11 +12,5 @@ Route::prefix('api/v1')->group(function(){
         ]);
         return "Arrival created<3";
     });
-    Event::listen('create.event', function() {
-        Arrival::create([
-            'name'=> post('name'),
-            'time'=> post('time'),
-        ]);
-    });
 });
 
